@@ -1,0 +1,5 @@
+// 新しいPJの作成コマンド
+npm create vite@latest {dayxx-aabbcc} -- --template react-ts
+
+// ブランチ命名ルール
+feature/dayxx-aabbcc
