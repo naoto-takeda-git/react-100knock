@@ -1,0 +1,14 @@
+/* Basic reset and ensure the app can fill the viewport so <main> background is visible */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* optional: ensure main covers viewport if no other layout constrains it */
+main {
+  min-height: 100vh;
+}
+
+/* You can add theme or other global styles here */
