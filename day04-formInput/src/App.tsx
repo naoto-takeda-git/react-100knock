@@ -1,48 +1,46 @@
 import { useState } from "react";
 
 const App = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [obj, setObj] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const onChangeName = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
-    setName(e.target.value);
-  };
-  const onChangeEmail = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
-    setEmail(e.target.value);
-  };
-  const onChangeMessage = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
-    setMessage(e.target.value);
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setObj((prev) => ({ ...prev, [name]: value }));
   };
 
   const buttonClick = () => {
-    alert(`name: ${name} email: ${email} message: ${message}`);
+    alert(`name: ${obj.name} email: ${obj.email} message: ${obj.message}`);
   };
   return (
     <div>
       <div>
-        <p>氏名: {name}</p>
-        <p>メールアドレス: {email}</p>
-        <p>メッセージ: {message}</p>
+        <p>氏名: {obj.name}</p>
+        <p>メールアドレス: {obj.email}</p>
+        <p>メッセージ: {obj.message}</p>
       </div>
       <div>
         <div>
           <label htmlFor="name">氏名：</label>
-          <input id="name" type="text" value={name} onChange={onChangeName} />
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={obj.name}
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="email">メールアドレス：</label>
           <input
             id="email"
             type="text"
-            value={email}
-            onChange={onChangeEmail}
+            name="email"
+            value={obj.email}
+            onChange={onChange}
           />
         </div>
         <div>
@@ -50,8 +48,9 @@ const App = () => {
           <input
             id="message"
             type="text"
-            value={message}
-            onChange={onChangeMessage}
+            name="message"
+            value={obj.message}
+            onChange={onChange}
           />
         </div>
       </div>
