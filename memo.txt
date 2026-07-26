@@ -2,4 +2,5 @@
 npm create vite@latest {dayxx-aabbcc} -- --template react-ts
 
 // ブランチ命名ルール
-feature/dayxx-aabbcc
+旧：feature/dayxx-aabbcc
+新：feature/knock00-{detail}
