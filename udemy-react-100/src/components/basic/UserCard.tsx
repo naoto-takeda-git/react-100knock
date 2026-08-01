@@ -4,11 +4,11 @@ type UserCardProps = {
     isActive: boolean
 };
 
-const UserCard: React.FC = ({
+const UserCard: React.FC<UserCardProps> = ({
     name,
     age,
     isActive
-}: UserCardProps) => {
+}) => {
     return (
         <div className="user-card">
             名前：{name}<br />

@@ -1,4 +1,4 @@
-const Knock03: React.FC = () => {
+const Knock03 = () => {
   const age: number = 27;
   const name: string = "tanaka";
   const currentYear = new Date().getFullYear();

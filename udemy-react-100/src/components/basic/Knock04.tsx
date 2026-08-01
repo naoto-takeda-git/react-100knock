@@ -1,4 +1,4 @@
-const Knock04: React.FC = () => {
+const Knock04 = () => {
   // インラインスタイル用
   const customeBox: React.CSSProperties = {
     backgroundColor: "#f0f0f0",

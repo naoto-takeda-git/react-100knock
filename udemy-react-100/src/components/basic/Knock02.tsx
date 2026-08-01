@@ -1,4 +1,4 @@
-const Knock02: React.FC = () => {
+const Knock02 = () => {
   return (
     <>
       <h1>私のプロフィール</h1>
