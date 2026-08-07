@@ -1,5 +1,5 @@
 import "./App.css";
-import Knock from "./components/basic/Knock23";
+import Knock from "./components/basic/Knock25";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 type GreetingProps = {
-  name: stirng;
+  name: string;
 };
 
 const Greeting = ({ name }: GreetingProps) => {
